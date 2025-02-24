@@ -64,6 +64,11 @@ body{
     text-shadow: 0 0 25px var(--Green-100);
 }
 
+.navbar{
+    display: flex;
+    gap: 20px;
+}
+
 .navbar a{
     font-size: 1.8rem;
     color: white;
@@ -756,4 +761,35 @@ span{
         grid-template-columns: repeat(1,1fr);
     }
 
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        position: absolute;
+        top: 70px; /* Adjust for header height */
+        right: 0;
+        background: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+        display: none; /* Initially hidden */
+    }
+
+    .navbar a {
+        display: block;
+        padding: 10px;
+        color: white;
+        text-decoration: none;
+    }
+
+    .navbar.active {
+        display: flex; /* Show when active */
+    }
+
+    #menu-icon {
+        font-size: 30px;
+        cursor: pointer;
+        display: block;
+    }
 }
