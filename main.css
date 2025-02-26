@@ -5,7 +5,6 @@
     text-decoration: none;
     border: none;
     outline: none;
-    scroll-behavior:smooth;
     font-family: "Poppins", sans-serif;
 }
 
@@ -13,9 +12,9 @@
 :root{
     --Purple-100: hsl(254, 88%, 90%);
     --Purple-500: hsl(256, 67%, 59%);
+    --Brown-500: hsl(24, 39%, 33%);
     --Gold-500: hsl(59, 94%, 44%);
     --Yellow-100: hsl(31, 66%, 93%);
-    --Yellow-500: hsl(39, 100%, 71%);
     --White: hsl(0, 0%, 100%);
     --Black: hsl(0, 0%, 7%);
     --Green-100: hsl(135, 88%, 90%);
@@ -26,12 +25,14 @@
 
 html{
     font-size: 60%;
-    overflow-x: hidden;
+    overflow: scroll;
+    scrollbar-width: none;
+    scroll-behavior:smooth;
 }
 
 body{
-    background: var(--bg-color);
-    color: white;
+    background: var(--Brown-100);
+    color: black;
 }
 
 .header{
@@ -61,7 +62,7 @@ body{
 }
 
 .logo span{
-    text-shadow: 0 0 25px var(--Green-100);
+    text-shadow: 0 0 25px var(--Brown-500);
 }
 
 .navbar{
@@ -147,9 +148,9 @@ span{
 }
 
 .home-img img:hover{
-    box-shadow: 0 0 25px var(--Brown-100),
-                0 0 50px var(--Brown-100),
-                0 0 100px var(--Brown-100);
+    box-shadow: 0 0 25px var(--Green-100),
+                0 0 50px var(--Green-100),
+                0 0 100px var(--Green-100);
 }
 
 .home-content p{
@@ -166,29 +167,29 @@ span{
     width: 4.5rem;
     height: 4.5rem;
     background: transparent;
-    border: 2px solid var(--Green-100);
+    border: 2px solid var(--Brown-500);
     font-size: 50%;
-    color: var(--Green-100);
+    color: var(--Brown-500);
     margin: 3rem 1.5rem 3rem 0;
     transition: 0.3s ease-in-out;
     border-radius: 50%;
 }
 
 .social-icons a:hover{
-    color: white;
+    color: var(--Green-100);
     transform: scale(1.3)translateY(-5px);
-    box-shadow: 0 0 25px var(--Green-100);
-    background-color: var(--Green-100);
+    box-shadow: 0 0 25px var(--Brown-500);
+    background-color: var(--Brown-500);
 }
 
 .btn{
     display: inline-block;
     padding: 1rem 8rem;
-    background: var(--Green-100);
+    background: var(--Brown-500);
     box-shadow: 0 0 25px var(--Green-100);
     border-radius: 4rem;
     font-size: 1.6rem;
-    color: black;
+    color: var(--Green-100);
     border: 2px solid transparent;
     letter-spacing: 0.1rem;
     font-weight: 600;
@@ -232,24 +233,24 @@ span{
 
 .text-animation span::before{
     content: "Model";
-    color: var(--Green-100);
+    color: var(--Brown-500);
     animation: words 20s infinite;
 }
 
 .text-animation span::after{
     content: "";
-    background-color: var(--bg-color);
+    background-color: var(--Brown-100);
     position: absolute;
     width: calc(100% + 3px);
     height: 100%;
-    border-left: 3px solid var(--bg-color);
+    border-left: 3px solid var(--Brown-100);
     right: -8px;
     animation: cursor 0.3s infinite, typing 20s steps(14) infinite;
 }
 
 @keyframes cursor{
     to{
-        border-left: 2px solid white;
+        border-left: 2px solid black;
     }
 }
 
@@ -309,11 +310,12 @@ span{
 
 .education{
     padding: 100px 15px;
-    background: var(--second-bg-bolor);
+    background: var(--Brown-500);
 }
 
 .education h2{
     margin-bottom: 5rem;
+    color: var(--Brown-100)
 }
 
 .timeline-items{
@@ -329,7 +331,7 @@ span{
     position: absolute;
     width: 5px;
     height: 100%;
-    background-color: var(--Brown-100);
+    background-color: var(--Green-100);
     left: calc(50% - 1px);
 }
 
@@ -375,7 +377,7 @@ span{
 .timeline-content{
     position: relative;
     z-index: 1;
-    background-color: var(--bg-color);
+    background-color: white;
     border: 3px solid var(--Green-100);
     padding: 30px 50px;
     border-radius: 4rem;
@@ -391,39 +393,26 @@ span{
 
 .timeline-content h3{
     font-size: 20px;
-    color: white;
+    color: black;
     margin: 0 0 10px;
     font-weight: 500;
 }
 
 .timeline-content p{
-    color: white;
+    color: black;
     font-size: 16px;
     font-weight: 300;
     line-height: 22px;
 }
 
-::-webkit-scrollbar{
-    width: 15px;
-}
-
-::-webkit-scrollbar-thumb{
-    background-color: var(--Green-100);
-}
-
-::-webkit-scrollbar-track{
-    background-color: var(--bg-color);
-    width: 50px;
-}
-
 .services{
-    background: var(--bg-color);
+    background: var(--Brown-100);
     color: black;
 }
 
 .services h2{
     margin-bottom: 5rem;
-    color: white;
+    color: var(--Brown-500);
 }
 
 .services-container{
@@ -434,7 +423,6 @@ span{
 }
 
 .service-box{
-    background-color: var(--Brown-100);
     height: 300px;
     border-radius: 3rem;
     border: 5px solid transparent;
@@ -480,7 +468,8 @@ span{
     padding: 0;
     font-size: 1rem;
     line-height: 1.7;
-    background: var(--second-bg-bolor);
+    background: var(--Brown-500);
+    color: var(--Brown-100);
     min-block-size: 100vh;
     display: grid;
 }
@@ -538,12 +527,12 @@ span{
 }
 
 .contact{
-    background-color: var(--bg-color);
+    background-color: var(--Brown-100);
 }
 
 .contact h2{
     margin-bottom: 3rem;
-    color: white;
+    color: black;
 }
 
 .contact form{
@@ -566,8 +555,8 @@ span{
     width: 100%;
     padding: 2.5rem;
     font-size: 1.8rem;
-    color: var(--Green-100);
-    background: var(--bg-color);
+    color: black;
+    background: white;
     border-radius: 2rem;
     border: 2px solid var(--Green-100);
     margin: 1.5rem 0;
@@ -583,7 +572,7 @@ span{
     bottom: 0;
     width: 100%;
     padding: 40px 0;
-    background-color: var(--second-bg-bolor);
+    background-color: var(--Brown-500);
 }
 
 .footer .social{
